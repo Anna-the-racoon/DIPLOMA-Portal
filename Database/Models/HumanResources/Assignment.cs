@@ -1,10 +1,5 @@
 ﻿using Database.Models.HumanResources;
 using HrService.Database.Models.OrgStructure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HrService.Database.Models.HumanResources
 {
@@ -18,6 +13,9 @@ namespace HrService.Database.Models.HumanResources
 
         public int DepartmentId { get; set; }
 
+        public DateOnly DateStart { get; set; }
+
+        public DateOnly? DateEnd { get; set; }
 
 
         public virtual Employee Employee { get; set; }

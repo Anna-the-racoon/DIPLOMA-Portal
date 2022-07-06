@@ -1,4 +1,5 @@
 ﻿using Database.Models.Contacts;
+using HrService.Database.Models.HumanResources;
 
 namespace Database.Models.HumanResources
 {
@@ -20,5 +21,7 @@ namespace Database.Models.HumanResources
 
 
         public virtual Phone? Phone { get; set; }
+
+        public virtual Assignment? Assignment { get; set; }
     }
 }

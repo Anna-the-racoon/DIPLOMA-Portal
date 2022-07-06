@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HrService.Database.Models.HumanResources;
+using System;
 
 namespace HrService.Database.Models.OrgStructure
 {
@@ -17,5 +14,7 @@ namespace HrService.Database.Models.OrgStructure
         public bool IsActual { get; set; }
 
         public bool IsManager { get; set; }
+
+        public virtual Assignment? Assignment { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace Database.Configurations.HumanResource
     {
         public void Configure(EntityTypeBuilder<Employee> builder)
         {
-            builder.ToTable("Employee", "dbo.HumanResources");
+            builder.ToTable("Employees", "dbo.HumanResources");
 
             builder.HasKey(p => p.Id);
 

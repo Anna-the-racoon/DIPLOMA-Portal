@@ -1,4 +1,6 @@
-﻿namespace HrService.Database.Models.OrgStructure
+﻿using HrService.Database.Models.HumanResources;
+
+namespace HrService.Database.Models.OrgStructure
 {
     internal class Department
     {
@@ -17,5 +19,9 @@
         public int? ParentId { get; set; }
 
         public string? Email { get; set; }
+
+
+        public virtual Assignment? Assignment { get; set; }
+
     }
 }
