@@ -1,0 +1,62 @@
+﻿@model UIWeb.Areas.Security.Model.RegisterVm
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Layout";
+}
+
+<div class="form-security form-row">
+    <div class="col-lg-6 col-md-12 bg-info c-white">
+        <div class="align-center">
+            <h1>haval greetings you!</h1>
+            <p>enter your personal information</p>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12 bg-white">
+        <div class="align-center">
+            <h1 class="c-info mb-4">create a new account</h1>
+            <form asp-antiforgery="true" asp-area="Security" asp-controller="Account" asp-action="Register" asp-route-returnUrl="@ViewBag.ReturnUrl">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <input asp-for="FirstName" placeholder="first name" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="LastName" placeholder="last name" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Email" type="email" placeholder="email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input id="textPassword" asp-for="Password" type="password" placeholder="password" class="form-control"/>
+                        <div class="input-group-append">
+                            <button id="buttonPassword" class="btn btn-outline-info" type="button">
+                                <span id="iconPassword" class="fa fa-fw fa-eye-slash"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input id="textConfirmPassword" asp-for="ConfirmPassword" type="password" placeholder="confirm password" class="form-control" />
+                        <div class="input-group-append">
+                            <button id="buttonConfirmPassword" class="btn btn-outline-info" type="button">
+                                <span  id="iconConfirmPassword" class="fa fa-fw fa-eye-slash"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="control-button bg-info">submit</button>
+                </div> 
+                <div class="form-group m-0">
+                    <a class="control-link" asp-area="" asp-controller="Home" asp-action="Index">home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

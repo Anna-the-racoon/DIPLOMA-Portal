@@ -1,8 +1,16 @@
-﻿@{
+﻿@model UIWeb.Models.Home.HomeVm
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<partial name="_ExpressAccess" />
+
+<partial name="_CompanyNews" for="@Model.CompanyNews" />
+
+<div class="d-lg-flex flex-lg-row d-md-block m-0 p-0">
+
+    <partial name="_Notifications" for="@Model.Notifications" />
+
+    <partial name="_Announcements" for="@Model.Announcements" />
+
 </div>

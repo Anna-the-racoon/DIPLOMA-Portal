@@ -1,0 +1,41 @@
+﻿<div class="d-lg-flex d-md-block shadow-sm rounded my-3 p-3 bg-white">
+    <div class="d-lg-inline-flex d-md-block ">
+        @*mr-auto*@
+        <h3 class="first-letter-red">Express access</h3>
+    </div>
+    <div class="d-lg-inline-flex d-md-block mx-4">
+        <div id="btn0101" class="d-inline-block m-1">
+            <div class="icon-btn">
+                <button class="btn btn-info text-nowrap shadow-sm" onclick="window.open('http://helpdesk.hmmr.ru/', '_blank');">
+                    <span class="btn-gradient">
+                        @*<i class="fa fa-check"></i>*@
+                        <img src="~/image/apps/helpdesk.png" alt="" width="20" height="20" />
+                    </span>
+                    <span class="btn-text">Help desk</span>
+                </button>
+            </div>
+        </div>
+        <div id="btn0201" class="d-inline-block m-1">
+            <div class="icon-btn">
+                <button class="btn btn-info text-nowrap shadow-sm" onclick="window.open('http://doc.hmmr.ru/doc/ru_RU/', '_blank');">
+                    <span class="btn-gradient">
+                        @*<i class="fa fa-check"></i>*@
+                        <img src="~/image/apps/edms.png" alt="" width="20" height="20" />
+                    </span>
+                    <span class="btn-text">1C: EDMS</span>
+                </button>
+            </div>
+        </div>
+        <div id="btn0301" class="d-inline-block m-1">
+            <div class="icon-btn">
+                <button class="btn btn-info text-nowrap shadow-sm" onclick="location.href = '@Url.Action("Index", "Contact")'" >
+                    <span class="btn-gradient">
+                        @*<i class="fa fa-check"></i>*@
+                        <img src="~/image/apps/contacts.png" alt="" width="25" height="25" />
+                    </span>
+                    <span class="btn-text">Contacts</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

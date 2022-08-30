@@ -39,7 +39,7 @@ namespace Database.Context
             //options.UseLazyLoadingProxies(false);
             if (!options.IsConfigured) // <- без проверки возникает ошибка во время запуска тестов 'Multiple database providers in service provider'. InMemory создает свою конфигурацию.
             {
-                options.UseSqlServer(@"Server=.\WS-PC-88\SQLEXPRESS;Database=Portal;Trusted_Connection=True;");
+                options.UseSqlServer(@"Server=DESKTOP-K2BKJ4P\SQLEXPRESS;Database=Portal;Trusted_Connection=True;;");
             }
         }
 

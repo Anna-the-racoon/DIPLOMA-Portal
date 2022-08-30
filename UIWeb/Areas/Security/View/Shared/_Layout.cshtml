@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    <title>Portal / @ViewBag.Title</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="~/lib/bootstrap/4.4.1/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/fontawesome/css/all.css" rel="stylesheet" />
+
+    <link href="~/css/layouts/security.layout.css" rel="stylesheet" />
+    <link href="~/css/layouts/security.components.css" rel="stylesheet" />
+
+    <link href="~/css/components/components.button-social.css" rel="stylesheet" />
+    <link href="~/css/components/components.checkbox.css" rel="stylesheet" />
+
+    <link href="~/css/content/content.link.css" rel="stylesheet" />
+    <link href="~/css/content/content.shadow-custom.css" rel="stylesheet" />
+
+    <link href="~/css/utilites/utilites.animation.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main role="main">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
+
+    <script src="~/lib/jquery/jquery-3.4.1.min.js"></script>
+    <script src="~/lib/bootstrap/4.4.1/js/bootstrap.bundle.js"></script>
+
+    <script src="~/js/components/button-waves.js"></script>
+    <script src="~/js/components/password-show-hide.js"></script>
+
+    <script src="~/js/utilites/animation.js"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

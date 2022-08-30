@@ -1,0 +1,57 @@
+﻿<div class="sidebar bg-light">
+    <div class="sidebar-header">
+        <div class="navbar-brand">
+            Security area
+        </div>
+    </div>
+    <div class="sidebar-body">
+        <div class="list-group" role="tablist" id="sidebar">
+            <a class="list-group-item list-group-item-action border border-bottom-0"
+               asp-area="" asp-controller="Home" asp-action="Index">
+                <div class="text-uppercase">Home</div>
+            </a>
+            <a class="list-group-item list-group-item-action border border-bottom-0"
+               asp-area="Administration" asp-controller="Dashboard" asp-action="Index">
+                <div class="text-uppercase">Dashboard</div>
+            </a>
+
+
+            <button class="list-group-item list-group-item-action border border-bottom-0" data-toggle="collapse" href="#security">
+                <div class="text-uppercase d-flex justify-content-between align-items-center">Security <span class="fas fa-angle-right float-right"></span></div>
+            </button>
+            <div class="list-group border-0 collapse" role="tablist" id="security">
+                <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-end"
+                   asp-area="Administration" asp-controller="User" asp-action="List">
+                    - Users
+                </a>
+                <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-end"
+                   asp-area="Administration" asp-controller="Role" asp-action="List">
+                    - Roles
+                </a>
+                <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-end"
+                   asp-area="Administration" asp-controller="Permission" asp-action="List">
+                    - Permissions
+                </a>
+            </div>
+
+
+            <button class="list-group-item list-group-item-action" data-toggle="collapse" href="#other">
+                <div class="text-uppercase d-flex justify-content-between align-items-center">Other <span class="fas fa-angle-right float-right"></span></div>
+            </button>
+            <div class="list-group border-0 collapse" id="other">
+                <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-end"
+                   asp-area="Administration" asp-controller="Visitor" asp-action="List">
+                    - Visitors
+                </a>
+                <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-end"
+                   asp-area="Administration" asp-controller="LogError" asp-action="List">
+                    - Log Errors
+                </a>
+            </div>
+            
+@*            <partial name="_SelectLanguageAdministrationPartial"/>
+*@
+        </div>
+    </div>
+    <div class="sidebar-background"></div>
+</div>

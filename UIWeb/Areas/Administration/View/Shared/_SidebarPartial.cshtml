@@ -1,0 +1,45 @@
+﻿<div class="sidebar bg-light">
+    <div class="sidebar-header">
+        <div class="navbar-brand">
+            Administration area
+        </div>
+    </div>
+    <div class="sidebar-body">
+        <div class="list-group" role="tablist" id="sidebar">
+            <a class="list-group-item list-group-item-action border border-bottom-0"
+               asp-area="" asp-controller="Home" asp-action="Index">
+                <div class="text-uppercase">Home</div>
+            </a>
+            <a class="list-group-item list-group-item-action border border-bottom-0"
+               asp-area="Administration" asp-controller="Dashboard" asp-action="Index">
+                <div class="text-uppercase">Dashboard</div>
+            </a>
+
+            <button class="list-group-item list-group-item-action border border-bottom-0" data-toggle="collapse" href="#content">
+                <div class="text-uppercase d-flex justify-content-between align-items-center">Content <span class="fas fa-angle-right float-right"></span></div>
+            </button>
+            <div class="list-group border-0 collapse" id="content" role="tablist">
+                <button class="list-group-item list-group-item-action border border-bottom-0" data-toggle="collapse" href="#news">
+                    <div class="text-uppercase"><span class="fas fa-angle-right"></span> News</div>
+                </button>
+                <div class="list-group border-0 collapse" id="news">
+                    <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-end"
+                       asp-area="Administration" asp-controller="CompanyNews" asp-action="List">
+                        - Company news
+                    </a>
+                    <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-end"
+                       asp-area="Administration" asp-controller="Notification" asp-action="List">
+                        - Notifications
+                    </a>
+                    <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-end"
+                       asp-area="Administration" asp-controller="Announcement" asp-action="List">
+                        - Announcements
+                    </a>
+                </div>
+
+@*            <partial name="_SelectLanguageAdministrationPartial"/>
+*@
+        </div>
+    </div>
+    <div class="sidebar-background"></div>
+</div>

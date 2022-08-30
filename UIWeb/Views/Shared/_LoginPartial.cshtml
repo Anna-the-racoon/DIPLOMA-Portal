@@ -1,0 +1,32 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <div class="dropdown m-1">
+        <button class="btn btn-outline-info dropdown-toggle" type="button" id="security" data-toggle="dropdown">
+            @User.Identity.Name
+            @*<a class="m-1 p-0" asp-area="" asp-controller="Admin" asp-action="Index">
+                <img class="rounded-circle" src="image/userpic.png" alt="" height="38" width="38" />
+                </a>*@
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" asp-area="Security" asp-controller="Account" asp-action="Logout">
+                Logout
+            </a>
+            @if (User.IsInRole("Administrator") ||
+                 User.IsInRole("CompanyNewsMaker") ||
+                 User.IsInRole("NotificationMaker") ||
+                 User.IsInRole("AnnouncementMaker") ||
+                 User.IsInRole("StaffActivityMaker"))
+            {
+                <a class="dropdown-item" asp-area="Administration" asp-controller="Dashboard" asp-action="Index">
+                    Administration
+                </a>
+            }
+        </div>
+    </div>
+}
+else
+{
+    <a class="btn btn-outline-info m-1" asp-area="Security" asp-controller="Account" asp-action="Login">
+        Login
+    </a>
+}

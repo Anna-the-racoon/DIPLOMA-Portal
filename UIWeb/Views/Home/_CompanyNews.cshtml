@@ -1,0 +1,29 @@
+﻿@*@using Logic.Extensions.Files*@
+@model UIWeb.Models.Home.CompanyNewsVm
+
+<div class="d-block shadow-sm rounded my-3 p-3 bg-white">
+    <div class="d-flex m-0">
+        <h3 class="first-letter-red mr-auto">Company news</h3>
+        <a class="btn shadow-sm btn-outline-info" asp-area="" asp-controller="CompanyNews" asp-action="List">
+            List
+        </a>
+    </div>
+    <div class="card-deck m-0">
+@*        @foreach (var entry in Model.CompanyNews)
+        {
+        <div class="d-block col-lg-3 col-md-6 col-sm-12 my-3 p-0">
+            <a class="card card-narrower shadow-sm border-info mx-1 h-100" href="@Url.Action("Details", "CompanyNews", new {id = entry.Id})">
+                <div class="card-narrower-image card-image-zoom rounded shadow-custom">
+                    <img class="card-img-top image-height" src="@Url.Action("GetPicture", "Home", new {id = entry.PictureId})" alt="news">
+                </div>
+                <div class="card-body pb-0">
+                    <p class="card-text card-text-custom">@entry.Description</p>
+                </div>
+                <div class="card-footer py-1">
+                    <p class="card-text-custom text-muted"><i class="far fa-clock"></i> @entry.Date</p>
+                </div>
+            </a>
+        </div>
+        }
+*@    </div>
+</div>

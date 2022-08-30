@@ -1,0 +1,23 @@
+﻿@model  UIWeb.Models.Home.AnnouncementVm
+
+<div class="d-block shadow-sm rounded m-0 ml-lg-1 ml-md-0 p-3 bg-white w-100">
+    <div class="d-flex mb-2">
+        <h3 class="first-letter-red mr-auto">Announcements</h3>
+        <a class="btn shadow-sm btn-outline-info" asp-area="" asp-controller="Announcement" asp-action="List">
+            List
+        </a>
+    </div>
+    <div class="d-block mt-3 p-0">
+        <div class="list-group">
+@*            @foreach (var entry in @Model.Announcements)
+            {
+                <a href="@Url.Action("Details", "Announcement", new {id = entry.Id})" class="list-group-item list-group-item-action border-info">
+                    <h6 class="font-weight-bold mb-1">@entry.Description</h6>
+                    <div class="d-flex w-100 justify-content-between">
+                        <span class="small text-muted"><i class="far fa-clock"></i> @entry.Date</span>
+                    </div>
+                </a>
+            }
+*@        </div>
+    </div>
+</div>

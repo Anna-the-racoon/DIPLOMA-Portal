@@ -1,0 +1,59 @@
+﻿@model UIWeb.Areas.Security.Model.LoginVm
+
+@{
+    ViewData["Title"] = "Sign in";
+    Layout = "_Layout";
+}
+
+<div class="form-security form-row">
+    <div class="col-lg-6 col-md-12 bg-info c-white">
+        <div class="align-center">
+            <h1>haval greetings you!</h1>
+            <p>sign in with your personal information</p>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12 bg-white" >
+        <div class="align-center">
+            <h1 class="c-info mb-4">sign in</h1>
+            <form asp-antiforgery="true" asp-area="Security" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@ViewBag.ReturnUrl">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <input asp-for="Email" type="email" placeholder="email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input id="textPassword" asp-for="Password" type="password" class="form-control" />
+                        <div class="input-group-append">
+                            <button id="buttonPassword" class="btn btn-outline-info" type="button">
+                                <span id="iconPassword" class="fa fa-fw fa-eye-slash"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group m-0">
+                    <div class="control-checkbox" type="checkbox">
+                        <label asp-for="RememberMe">
+                            <input asp-for="RememberMe" />
+                            @Html.DisplayNameFor(m => m.RememberMe)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="control-button bg-info">submit</button>
+                </div>
+
+                <div class="form-group m-0">
+                    <a class="control-link" asp-area="Security" asp-controller="Account" asp-action="ForgotPassword">forgot your password?</a>
+                </div>
+                <div class="form-group m-0">
+                    <a class="control-link" asp-area="Security" asp-controller="Account" asp-action="Register">register as a new user</a>
+                </div>
+                <div class="form-group m-0">
+                    <a class="control-link" asp-area="" asp-controller="Home" asp-action="Index">home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

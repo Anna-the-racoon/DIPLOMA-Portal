@@ -6,4 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Administration\Controllers\" />
+    <Folder Include="Areas\Administration\Model\" />
+    <Folder Include="Areas\HumanResource\Controllers\" />
+    <Folder Include="Areas\HumanResource\Model\" />
+    <Folder Include="Areas\SecurityAdministration\Controllers\" />
+    <Folder Include="Areas\SecurityAdministration\Model\" />
+  </ItemGroup>
+
 </Project>

@@ -15,10 +15,8 @@ namespace HrService.Database.Configurations.HumanResource
             builder.Property(p => p.Id)
                 .ValueGeneratedOnAdd();
 
-            builder.HasOne(p=>p.Employee)
-                .WithMany(p=>p.Assignment)
-
-
+            //builder.HasOne(p => p.Employee)
+            //    .WithMany(p => p.Assignment);
         }
     }
 }

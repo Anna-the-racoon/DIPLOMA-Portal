@@ -1,0 +1,23 @@
+﻿@model UIWeb.Models.Home.NotificationsVm
+
+    <div class="d-block shadow-sm rounded m-0 mr-lg-1 mr-md-0 p-3 bg-white w-100">
+        <div class="d-flex mb-2">
+            <h3 class="first-letter-red mr-auto">Notifications</h3>
+            <a class="btn shadow-sm btn-outline-info" asp-area="" asp-controller="Notification" asp-action="List">
+                List
+            </a>
+        </div>
+        <div class="d-block mt-3 p-0">
+            <div class="list-group">
+@*                @foreach (var entry in @Model.Notifications)
+                {
+                    <a href="@Url.Action("Details", "Notification", new {id = entry.Id})" class="list-group-item list-group-item-action border-info">
+                        <h6 class="font-weight-bold mb-1">@entry.Description</h6>
+                        <div class="d-flex justify-content-between">
+                            <span class="small text-muted"><i class="far fa-clock"></i> @entry.Date</span>
+                        </div>
+                    </a>
+                }
+*@            </div>
+        </div>
+    </div>
